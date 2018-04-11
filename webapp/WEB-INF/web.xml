@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+   <servlet>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+        <init-param>
+            <param-name>services</param-name>
+            <param-value>com.tmsoftstudio.businesscontrol.backend.MyEndpoint</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <url-pattern>/_ah/spi/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>_ah</web-resource-name>
+            <url-pattern>/_ah/*</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+   <!--     <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>-->
+    </security-constraint>
+
+    <servlet>
+        <servlet-name>UsersListServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.UsersListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsersListServlet</servlet-name>
+        <url-pattern>/userslist/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutUserServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutUserServlet</servlet-name>
+        <url-pattern>/putuser/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GroupsListServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.GroupsListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GroupsListServlet</servlet-name>
+        <url-pattern>/groupslist/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutRouteServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutRouteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutRouteServlet</servlet-name>
+        <url-pattern>/putroute/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RoutesServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.RoutesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoutesServlet</servlet-name>
+        <url-pattern>/routes/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutRouteStateServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutRouteStateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutRouteStateServlet</servlet-name>
+        <url-pattern>/putroutestate/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutDescServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutDescServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutDescServlet</servlet-name>
+        <url-pattern>/putdesc/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DescsServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.DescsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DescsServlet</servlet-name>
+        <url-pattern>/descs/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutDescStateServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutDescStateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutDescStateServlet</servlet-name>
+        <url-pattern>/putdescstate/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteDescServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.DeleteDescServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDescServlet</servlet-name>
+        <url-pattern>/deletedesc/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteRouteServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.DeleteRouteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteRouteServlet</servlet-name>
+        <url-pattern>/deleteroute/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutTaskServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutTaskServlet</servlet-name>
+        <url-pattern>/puttask/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TasksServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.TasksServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TasksServlet</servlet-name>
+        <url-pattern>/tasks/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PutTaskStateServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.PutTaskStateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PutTaskStateServlet</servlet-name>
+        <url-pattern>/puttaskstate/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteTaskServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.DeleteTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTaskServlet</servlet-name>
+        <url-pattern>/deletetask/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TracksServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.TracksServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TracksServlet</servlet-name>
+        <url-pattern>/tracks/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BlobUploadServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.BlobUploadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BlobUploadServlet</servlet-name>
+        <url-pattern>/blob/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteGroupServlet</servlet-name>
+        <servlet-class>com.tmsoftstudio.businesscontrol.backend.DeleteGroupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteGroupServlet</servlet-name>
+        <url-pattern>/deletegroup/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
