@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_task"
+            android:title="Получить задание" />
+
+        <item
+            android:id="@+id/nav_view_task"
+            android:title="Посмотреть задание" />
+
+        <item
+            android:id="@+id/nav_start_task"
+            android:title="Начать выполнение" />
+        <item
+            android:id="@+id/nav_end_task"
+            android:title="Закончить выполнение" />
+        <item
+            android:id="@+id/nav_report"
+            android:title="Составить отчет" />
+        <item
+            android:id="@+id/nav_send_report"
+            android:title="Послать отчет" />
+
+    </group>
+
+
+</menu>
